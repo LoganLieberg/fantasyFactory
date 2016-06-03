@@ -1,0 +1,22 @@
+<div>
+  <form ng-submit="submitSkill()">
+    <label for="skill">Skill: </label>
+    <input type="text" name="skill" ng-model="skill.skill" />
+
+    <label for="years">Years known: </label>
+    <input type="number" name="years" ng-model="skill.years" />
+
+    <button type="submit">Submit Skill</button>
+  </form>
+
+  <h2>{{user.username}}'s skills that kills</h2>
+
+  <div ng-repeat="skill in skills">
+    <p>
+      {{skill.skill}}
+    </p>
+    <p>
+      {{skill.years}}
+    </p>
+  </div>
+</div>
